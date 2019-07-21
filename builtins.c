@@ -6,7 +6,7 @@
 /*   By: alkozma <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/13 15:59:05 by alkozma           #+#    #+#             */
-/*   Updated: 2019/07/20 13:30:03 by alkozma          ###   ########.fr       */
+/*   Updated: 2019/07/21 06:08:14 by alkozma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,7 +97,8 @@ int			check_builtins(t_minishell *in)
 		while (in->argv[i + 1])
 		{
 			if (in->argv[i + 1][0] > 0)
-				ft_printf("%s%s", in->argv[i + 1], in->argv[i + 2] ? " " : "");
+				hide_quotes(in->argv[i + 1]);
+			in->argv[i + 2] ? write(1, " ", 1) : 0;
 			i++;
 		}
 		ft_printf("\n");

@@ -6,7 +6,7 @@
 /*   By: alkozma <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/07 10:32:11 by alkozma           #+#    #+#             */
-/*   Updated: 2019/07/20 13:26:53 by alkozma          ###   ########.fr       */
+/*   Updated: 2019/07/21 06:06:53 by alkozma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,7 @@ void				hash_env(t_minishell **in);
 void				add_hash(t_minishell **in, unsigned long hash);
 void				exec_program(char *input, t_minishell *in);
 void				sigint_handler(int x);
+void				hide_quotes(char *str);
 
 char				*accessible(char *fname, t_minishell *in);
 
